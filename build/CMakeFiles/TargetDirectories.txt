@@ -1,0 +1,6 @@
+D:/projects/c++/android_cpp_test/build/CMakeFiles/android_cpp_test.dir
+D:/projects/c++/android_cpp_test/build/CMakeFiles/edit_cache.dir
+D:/projects/c++/android_cpp_test/build/CMakeFiles/rebuild_cache.dir
+D:/projects/c++/android_cpp_test/build/third_party/HWCPipe/CMakeFiles/rebuild_cache.dir
+D:/projects/c++/android_cpp_test/build/third_party/HWCPipe/CMakeFiles/hwcpipe.dir
+D:/projects/c++/android_cpp_test/build/third_party/HWCPipe/CMakeFiles/edit_cache.dir
