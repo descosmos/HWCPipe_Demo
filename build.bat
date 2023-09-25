@@ -5,19 +5,22 @@
     @set ANDROID_NDK=E:\ndk\android-ndk-r22b-windows-x86_64\android-ndk-r22b
 )
 @if DEFINED ANDROID_SDK_ROOT (
-    @set CMAKE=%ANDROID_SDK_ROOT%\cmake\3.10.2.4988404\bin\cmake.exe
+    @set CMAKE=%ANDROID_SDK_ROOT%\cmake\3.22.1\bin\cmake.exe
 ) else (
-    @set CMAKE=C:\Users\Kingsoft\AppData\Local\Android\Sdk\cmake\3.18.1\bin\cmake.exe
+    @set CMAKE=C:\Users\descosmos\AppData\Local\Android\Sdk\cmake\3.22.1\bin\cmake.exe
 )
 @cd %~dp0
 
 @set BUILD_DIR=build
 
-rem @rd /s /q %BUILD_DIR%
+@rd /s /q %BUILD_DIR%
 
-rem @mkdir %BUILD_DIR%
+@mkdir %BUILD_DIR%
 
 @echo %BUILD_DIR%
+@echo %CMAKE%
+@echo %ANDROID_NDK%
+
 @cd %BUILD_DIR%
 
 @%CMAKE% -G "Unix Makefiles" ^
@@ -32,8 +35,8 @@ rem @mkdir %BUILD_DIR%
 
 @%CMAKE% --build .
 
-@cd ..
-@adb push .\build\arm64-v8a\android_cpp_test /data/local/tmp
-@adb shell chmod +x /data/local/tmp/android_cpp_test
-@adb shell ./data/local/tmp/android_cpp_test
+@REM @cd ..
+@REM @adb push .\build\arm64-v8a\android_cpp_test /data/local/tmp
+@REM @adb shell chmod +x /data/local/tmp/android_cpp_test
+@REM @adb shell ./data/local/tmp/android_cpp_test
 pause
