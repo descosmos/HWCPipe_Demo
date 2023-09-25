@@ -2,7 +2,7 @@
 @if DEFINED ANDROID_NDK_ROOT (
     @set ANDROID_NDK=%ANDROID_NDK_ROOT%
 ) else (
-    @set ANDROID_NDK=D:\ndk\android-ndk-r19c-windows-x86_64\android-ndk-r19c
+    @set ANDROID_NDK=E:\ndk\android-ndk-r22b-windows-x86_64\android-ndk-r22b
 )
 @if DEFINED ANDROID_SDK_ROOT (
     @set CMAKE=%ANDROID_SDK_ROOT%\cmake\3.10.2.4988404\bin\cmake.exe
